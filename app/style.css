@@ -1,0 +1,205 @@
+/* StatAtlas: paper background, deep-green header, teal accents. One clear
+   job per rule group; no framework, no web fonts, nothing fetched. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #1c2b26;
+  background: #f6f3ec;
+}
+
+a { color: #0b6e4f; }
+a:hover { color: #084d38; }
+
+.site-header {
+  background: #0b3d2e;
+  color: #f6f3ec;
+}
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+}
+.brand {
+  color: #f6f3ec;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.site-nav a {
+  color: #cfe8dc;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 2px;
+}
+.site-nav a:hover { color: #ffffff; text-decoration: underline; }
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px 8px;
+}
+
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 21px; line-height: 1.3; margin: 0 0 10px; }
+
+.hero {
+  background: #ffffff;
+  border: 1px solid #d8d2c2;
+  border-left: 6px solid #0b6e4f;
+  border-radius: 8px;
+  padding: 24px 24px 20px;
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: 38px; margin-bottom: 6px; }
+.hero-sub { font-size: 18px; margin: 0 0 10px; color: #33463d; }
+.hero-numbers { font-size: 15px; margin: 0 0 16px; }
+.hero-numbers b { color: #0b6e4f; font-size: 18px; }
+.hero-links { margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+
+.button {
+  display: inline-block;
+  background: #0b6e4f;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+.button:hover { background: #084d38; color: #ffffff; }
+.button.secondary { background: #e7efe9; color: #0b3d2e; border: 1px solid #b9cfc2; }
+.button.secondary:hover { background: #d5e5dc; color: #0b3d2e; }
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8d2c2;
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+.panel > p:first-child { margin-top: 0; }
+
+.breadcrumb { font-size: 14px; color: #5a6b62; margin: 0 0 8px; }
+.country-facts { font-size: 17px; color: #33463d; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.country-card {
+  display: block;
+  border: 1px solid #d8d2c2;
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  background: #fdfcf9;
+}
+.country-card:hover { border-color: #0b6e4f; }
+.country-name { font-size: 20px; font-weight: 800; color: #0b3d2e; }
+.country-region { font-size: 13px; color: #5a6b62; margin-bottom: 8px; }
+.country-figures { display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.country-figures b { color: #0b6e4f; }
+.country-note { font-size: 13px; color: #5a6b62; margin-top: 8px; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.stat-card {
+  border: 1px solid #d8d2c2;
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #fdfcf9;
+}
+.stat-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #5a6b62; }
+.stat-value { font-size: 26px; font-weight: 800; color: #0b3d2e; margin: 2px 0; }
+.stat-unit { font-size: 14px; font-weight: 600; color: #5a6b62; }
+.stat-meta { font-size: 13px; color: #33463d; }
+.stat-source { font-size: 12px; color: #7a8a81; margin-top: 4px; }
+
+.chart { display: block; margin: 8px 0; }
+.chart-label { font-size: 13px; fill: #1c2b26; }
+.chart-value { font-size: 13px; font-weight: 700; fill: #1c2b26; }
+.chart-legend { font-size: 13px; fill: #1c2b26; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 12px 0 16px;
+  align-items: center;
+}
+.controls label { font-weight: 600; font-size: 14px; }
+.controls select,
+.controls input {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #b9cfc2;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-left: 6px;
+}
+.controls input { min-width: 200px; }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  overflow-x: auto;
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 9px 10px;
+  border-bottom: 1px solid #e3ddcd;
+}
+.data-table thead th {
+  background: #eef3ee;
+  color: #0b3d2e;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.rank-tag { font-size: 12px; color: #5a6b62; font-weight: 400; }
+.unit-tag { font-size: 12px; color: #5a6b62; font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+.source-note { font-size: 13px; color: #5a6b62; }
+.source-list li { margin-bottom: 8px; }
+.feature-list li { margin-bottom: 6px; }
+.rank-list li { margin-bottom: 6px; }
+
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 20px 28px;
+  font-size: 13px;
+  color: #5a6b62;
+}
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .hero h1 { font-size: 30px; }
+  h1 { font-size: 25px; }
+  .panel { padding: 16px; }
+  .data-table { font-size: 13px; }
+  .data-table th,
+  .data-table td { padding: 7px 6px; }
+  .controls input { min-width: 0; width: 100%; }
+  .header-inner { padding: 12px 16px; }
+  #app { padding: 14px 14px 4px; }
+}
